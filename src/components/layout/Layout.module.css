@@ -1,0 +1,26 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  background-image: url("../../assets/background/group-9023.svg"),
+    url("../../assets/background/group-9024.svg"),
+    url("../../assets/background/group-9025.svg"),
+    url("../../assets/background/vector-63.svg"),
+    url("../../assets/background/vector-66.svg"),
+    url("../../assets/background/vector-67.svg");
+  background-repeat: no-repeat;
+  background-position: top 216px right 10px, top 184px right -100px,
+    bottom 87px right -50%, top 26px left 0, top 535px left 0,
+    bottom -100px right 0;
+  background-size: 96px, 82px, 82px, 164px, 109px, 164px;
+
+  @media screen and (min-width: 768px) {
+    background-position: top 83px right 0, top 184px right 172px,
+      bottom 87px right 50%, top 0 left 0, bottom 0 left 0, bottom 0 right 0;
+    background-size: 174px, 82px, 82px, 373px, 203px, 325px;
+  }
+}
