@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Urbanist:wght@500;700;800&display=swap");
+@import-normalize;
+
+:root {
+  --text-primary: #323631;
+  --color-white-80: #fcfaf9;
+
+  font-family: "Urbanist", sans-serif;
+  line-height: 1.38;
+  font-weight: 800;
+
+  color: var(--text-primary);
+  background-color: var(--color-white-80);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+}
