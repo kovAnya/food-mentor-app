@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0;
+}
+
+.header_logo {
+  display: flex;
+  align-items: center;
+  gap: 16.8px;
+  color: var(--text-logo);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.45px;
+}
+
+.header_logo_wrpr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33.5px;
+  height: 33.5px;
+  border-radius: 6.5px;
+  background: linear-gradient(0deg, #f4f4f4 0%, #f4f4f4 100%);
+}
+
+.header_logo_img {
+  width: 19px;
+}
