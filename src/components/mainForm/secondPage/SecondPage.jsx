@@ -23,7 +23,7 @@ export const SecondPage = (props) => {
                 type="radio"
                 name="goal"
                 value="Lose weight"
-                onChange={handleChange}
+                onClick={handleChange}
               />
               Lose weight
             </label>
@@ -33,7 +33,7 @@ export const SecondPage = (props) => {
                 type="radio"
                 name="goal"
                 value="Get perfect fit body"
-                onChange={handleChange}
+                onClick={handleChange}
               />
               Get perfect fit body
             </label>
@@ -43,7 +43,7 @@ export const SecondPage = (props) => {
                 type="radio"
                 name="goal"
                 value="Tone muscles"
-                onChange={handleChange}
+                onClick={handleChange}
               />
               Tone muscles
             </label>
@@ -53,7 +53,7 @@ export const SecondPage = (props) => {
                 type="radio"
                 name="goal"
                 value="Be healthier"
-                onChange={handleChange}
+                onClick={handleChange}
               />
               Be healthier
             </label>

@@ -25,7 +25,7 @@ export const FirstPage = (props) => {
                 type="radio"
                 name="gender"
                 value="male"
-                onChange={handleChange}
+                onClick={handleChange}
               />
               male
             </label>
@@ -35,7 +35,7 @@ export const FirstPage = (props) => {
                 type="radio"
                 name="gender"
                 value="female"
-                onChange={handleChange}
+                onClick={handleChange}
               />
               female
             </label>

@@ -23,7 +23,7 @@ export const FourthPage = (props) => {
                 type="radio"
                 name="workoute"
                 value="No, I don't"
-                onChange={handleChange}
+                onClick={handleChange}
               />
               No, I don't
             </label>
@@ -33,7 +33,7 @@ export const FourthPage = (props) => {
                 type="radio"
                 name="workout"
                 value="Only walks"
-                onChange={handleChange}
+                onClick={handleChange}
               />
               Only walks
             </label>
@@ -43,7 +43,7 @@ export const FourthPage = (props) => {
                 type="radio"
                 name="workout"
                 value="1-2 times a week"
-                onChange={handleChange}
+                onClick={handleChange}
               />
               1-2 times a week
             </label>
@@ -53,7 +53,7 @@ export const FourthPage = (props) => {
                 type="radio"
                 name="workout"
                 value="3-5 times a week"
-                onChange={handleChange}
+                onClick={handleChange}
               />
               3-5 times a week
             </label>

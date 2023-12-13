@@ -23,7 +23,7 @@ export const ThirdPage = (props) => {
                 type="radio"
                 name="body_type"
                 value="Regular"
-                onChange={handleChange}
+                onClick={handleChange}
               />
               Regular
             </label>
@@ -33,7 +33,7 @@ export const ThirdPage = (props) => {
                 type="radio"
                 name="body_type"
                 value="Plumb"
-                onChange={handleChange}
+                onClick={handleChange}
               />
               Plumb
             </label>
@@ -43,7 +43,7 @@ export const ThirdPage = (props) => {
                 type="radio"
                 name="body_type"
                 value="Extra Plumb"
-                onChange={handleChange}
+                onClick={handleChange}
               />
               Extra Plumb
             </label>
