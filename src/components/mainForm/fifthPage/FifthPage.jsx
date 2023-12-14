@@ -1,8 +1,19 @@
 import css from "./FifthPage.module.css";
-import { Formik, Field, Form } from "formik";
+import { Formik, Field, Form, ErrorMessage } from "formik";
+import * as Yup from "yup";
 import { BackButton } from "../backButton/BackButton";
 
 import lock from "../../../assets/quiz_img/image-926.png";
+
+const EmailValidationSchema = Yup.object().shape({
+  email: Yup.string()
+    .email("Invalid email. Example: mail@gmail.com")
+    .matches(
+      /^[a-zA-Z0-9_.]+@[a-zA-Z0-9_]+\.[a-zA-Z]{2,6}$/,
+      "Invalid email. Example: mail@gmail.com"
+    )
+    .required("Please, enter your email"),
+});
 
 export const FifthPage = (props) => {
   const handleSubmit = (values) => {
@@ -14,7 +25,11 @@ export const FifthPage = (props) => {
       <h1 className={css.quiz_title}>
         Enter your email to get your Personal Weight loss Plan!
       </h1>
-      <Formik onSubmit={handleSubmit} initialValues={props.data}>
+      <Formik
+        onSubmit={handleSubmit}
+        initialValues={props.data}
+        validationSchema={EmailValidationSchema}
+      >
         <Form className={css.form_container} autoComplete="off">
           <div className={css.input_wrpr}>
             <Field
@@ -23,6 +38,11 @@ export const FifthPage = (props) => {
               autoFocus
               name="email"
               placeholder="Your email"
+            />
+            <ErrorMessage
+              name="email"
+              component="div"
+              className={css.error_msg}
             />
           </div>
 
