@@ -1,0 +1,150 @@
+.quiz_title {
+  margin-bottom: 10vh;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.19;
+}
+
+.radio_wrpr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.radio_inner_wrpr {
+  display: flex;
+}
+
+.radio_label {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 550px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 8px 8px 24px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.37;
+  background-color: var(--color-white-100);
+  border-radius: 34px;
+}
+
+.radio_label:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.radio_label:hover .img_thmb,
+.radio_label:hover .styled_btn {
+  box-shadow: 7px 4px 14px rgba(49, 21, 4, 0.07);
+}
+
+.img_thmb {
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.img {
+  width: 56px;
+  height: 56px;
+}
+
+.styled_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 50px;
+  color: var(--color-white-100);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.37;
+}
+
+.styled_btn::after {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 10px;
+  background-image: url("../../../assets//arrow/arrow.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s;
+}
+
+.styled_btn:hover::after {
+  animation: changeArrow 1000ms infinite;
+}
+
+.color_secondary_mono_1 {
+  background-color: var(--color-secondary-mono-1);
+}
+
+.color_secondary_mono_2 {
+  background-color: var(--color-secondary-mono-2);
+}
+
+.color_secondary_mono_3 {
+  background-color: var(--color-secondary-mono-3);
+}
+
+.color_secondary_main {
+  background-color: var(--color-secondary-main);
+}
+
+.color_brand_mono_1 {
+  background-color: var(--color-brand-mono-1);
+}
+
+.color_brand_main {
+  background-color: var(--color-brand-main);
+}
+
+.radio_btn {
+  display: none;
+}
+
+.radio_btn:checked + .img_thmb {
+  border: 1px solid var(--color-brand-main);
+}
+
+@media screen and (min-width: 768px) {
+  .quiz_title {
+    margin-bottom: 56px;
+    font-size: 56px;
+    line-height: 1.14;
+  }
+
+  .radio_label {
+    padding: 12px 12px 12px 32px;
+    width: 550px;
+    font-size: 24px;
+    line-height: 1.33;
+  }
+
+  .radio_label:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  .img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .styled_btn {
+    font-size: 24px;
+    line-height: 1.33;
+    gap: 24px;
+  }
+
+  .styled_btn::after {
+    width: 64px;
+    height: 19px;
+  }
+}
