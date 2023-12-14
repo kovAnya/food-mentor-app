@@ -1,0 +1,134 @@
+.quiz_title {
+  margin-bottom: 10vh;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.19;
+}
+
+.form_container {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  min-height: 65vh;
+}
+
+.email_input {
+  flex: 1;
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: 3px solid var(--color-brand-main);
+  background: var(--color-white-100);
+}
+
+.input_wrpr {
+  flex: 1;
+}
+
+.policy {
+  padding: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 8px;
+  border-radius: 20px;
+}
+
+.policy_info {
+  color: var(--color-grey-100);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.43;
+}
+
+.policy_wrpr {
+  flex-shrink: 0;
+}
+
+.styled_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 20px;
+  border: none;
+  border-radius: 50px;
+  color: var(--color-white-100);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.37;
+}
+
+.styled_btn::after {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 10px;
+  background-image: url("../../../assets//arrow/arrow.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s;
+}
+
+.styled_btn:hover::after {
+  animation: changeArrow 1000ms infinite;
+}
+
+.color_brand_main {
+  background-color: var(--color-brand-main);
+}
+
+.color_secondary_mono_1 {
+  background-color: var(--color-secondary-mono-1);
+}
+
+@media screen and (min-width: 768px) {
+  .quiz_title {
+    margin-bottom: 56px;
+    font-size: 56px;
+    line-height: 1.14;
+  }
+
+  .form_container {
+    width: 550px;
+  }
+
+  .email_input {
+    padding: 20px 32px;
+  }
+
+  .policy {
+    margin-bottom: 40px;
+  }
+
+  .policy_info {
+    font-size: 16px;
+    line-height: 1.38;
+  }
+
+  .styled_btn {
+    font-size: 24px;
+    line-height: 1.33;
+    gap: 24px;
+  }
+
+  .styled_btn::after {
+    width: 64px;
+    height: 19px;
+  }
+}
+
+@keyframes changeArrow {
+  0% {
+    background-image: url("../../../assets/arrow/arrow.svg");
+  }
+  33% {
+    background-image: url("../../../assets/arrow/arrow-2.svg");
+  }
+  66% {
+    background-image: url("../../../assets/arrow/arrow-3.svg");
+  }
+}
