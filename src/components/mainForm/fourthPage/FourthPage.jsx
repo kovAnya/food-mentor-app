@@ -31,7 +31,7 @@ export const FourthPage = (props) => {
                 onClick={handleChange}
               />
               No, I don't
-              <div className={`${css.img_thmb} ${css.color_secondary_mono_1}`}>
+              <div className={`${css.img_thmb} ${css.color_secondary_main}`}>
                 <img className={css.img} src={workoutNot} alt="No, I don't" />
               </div>
             </label>
@@ -57,7 +57,7 @@ export const FourthPage = (props) => {
                 onClick={handleChange}
               />
               1-2 times a week
-              <div className={`${css.img_thmb} ${css.color_secondary_mono_1}`}>
+              <div className={`${css.img_thmb} ${css.color_secondary_mono_3}`}>
                 <img
                   className={css.img}
                   src={workoutTwoTimes}
@@ -74,7 +74,7 @@ export const FourthPage = (props) => {
                 onClick={handleChange}
               />
               3-5 times a week
-              <div className={`${css.img_thmb} ${css.color_secondary_mono_1}`}>
+              <div className={`${css.img_thmb} ${css.color_secondary_mono_2}`}>
                 <img
                   className={css.img}
                   src={workoutFiveTimes}
