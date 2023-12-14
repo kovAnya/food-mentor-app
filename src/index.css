@@ -5,9 +5,15 @@
   --text-primary: #323631;
   --text-logo: #374234;
   --text-footer: #8b8b8b;
-
   --color-white-80: #fcfaf9;
   --color-white-100: #fff;
+  --color-grey-100: #949494;
+  --color-brand-mono-1: #837ae9;
+  --color-brand-main: #5bd376;
+  --color-secondary-mono-1: #efedff;
+  --color-secondary-mono-2: #d9eefe;
+  --color-secondary-mono-3: #fff8de;
+  --color-secondary-main: #e0ffe7;
 
   font-family: "Urbanist", sans-serif;
   line-height: 1.38;
