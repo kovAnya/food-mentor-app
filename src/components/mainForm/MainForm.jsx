@@ -19,11 +19,13 @@ export const MainForm = () => {
 
   const [currentPage, setCurrentPage] = useState(0);
 
+  const [showResult, setShowResult] = useState(false);
+
   const handleNextPage = (newData, final = false) => {
     setData((prev) => ({ ...prev, ...newData }));
 
     if (final) {
-      console.log("message", newData);
+      setShowResult(true);
       return;
     }
     setCurrentPage((prev) => prev + 1);
@@ -42,5 +44,18 @@ export const MainForm = () => {
     <FifthPage next={handleNextPage} prev={handlePrevPage} data={data} />,
   ];
 
-  return <div className={css.container}>{pages[currentPage]}</div>;
+  return (
+    <>
+      {!showResult ? (
+        <div className={css.container}>{pages[currentPage]}</div>
+      ) : (
+        <div>
+          <p>
+            Gender: {data.gender}, Goal: {data.goal}, Body type:{" "}
+            {data.body_type}, Workout: {data.workout}, email: {data.email},
+          </p>
+        </div>
+      )}
+    </>
+  );
 };
