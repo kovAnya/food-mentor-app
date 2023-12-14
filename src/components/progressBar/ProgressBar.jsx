@@ -1,6 +1,6 @@
 import css from "./ProgressBar.module.css";
 
-export const ProgressBar = ({ progress = 5 }) => {
+export const ProgressBar = ({ progress }) => {
   return (
     <div
       className={css.bar}

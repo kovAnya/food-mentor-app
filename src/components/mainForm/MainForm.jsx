@@ -8,7 +8,7 @@ import { ThirdPage } from "./thirdPage/ThirdPage";
 import { FourthPage } from "./fourthPage/FourthPage";
 import { FifthPage } from "./fifthPage/FifthPage";
 
-export const MainForm = () => {
+export const MainForm = ({ onStepChange }) => {
   const [data, setData] = useState({
     gender: "",
     goal: "",
@@ -29,11 +29,13 @@ export const MainForm = () => {
       return;
     }
     setCurrentPage((prev) => prev + 1);
+    onStepChange(currentPage + 1);
   };
 
   const handlePrevPage = (newData) => {
     setData((prev) => ({ ...prev, ...newData }));
     setCurrentPage((prev) => prev - 1);
+    onStepChange(currentPage - 1);
   };
 
   const pages = [
