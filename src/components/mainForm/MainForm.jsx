@@ -8,7 +8,7 @@ import { ThirdPage } from "./thirdPage/ThirdPage";
 import { FourthPage } from "./fourthPage/FourthPage";
 import { FifthPage } from "./fifthPage/FifthPage";
 
-export const MainForm = () => {
+export const MainForm = ({ onStepChange }) => {
   const [data, setData] = useState({
     gender: "",
     goal: "",
@@ -19,19 +19,23 @@ export const MainForm = () => {
 
   const [currentPage, setCurrentPage] = useState(0);
 
+  const [showResult, setShowResult] = useState(false);
+
   const handleNextPage = (newData, final = false) => {
     setData((prev) => ({ ...prev, ...newData }));
 
     if (final) {
-      console.log("message", newData);
+      setShowResult(true);
       return;
     }
     setCurrentPage((prev) => prev + 1);
+    onStepChange(currentPage + 1);
   };
 
   const handlePrevPage = (newData) => {
     setData((prev) => ({ ...prev, ...newData }));
     setCurrentPage((prev) => prev - 1);
+    onStepChange(currentPage - 1);
   };
 
   const pages = [
@@ -42,5 +46,18 @@ export const MainForm = () => {
     <FifthPage next={handleNextPage} prev={handlePrevPage} data={data} />,
   ];
 
-  return <div className={css.container}>{pages[currentPage]}</div>;
+  return (
+    <>
+      {!showResult ? (
+        <div className={css.container}>{pages[currentPage]}</div>
+      ) : (
+        <div>
+          <p className={css.quiz_info}>
+            Gender: {data.gender}, Goal: {data.goal}, Body type:{" "}
+            {data.body_type}, Workout: {data.workout}, email: {data.email},
+          </p>
+        </div>
+      )}
+    </>
+  );
 };
