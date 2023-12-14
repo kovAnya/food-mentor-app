@@ -1,5 +1,6 @@
 import css from "./FifthPage.module.css";
 import { Formik, Field, Form } from "formik";
+import { BackButton } from "../backButton/BackButton";
 
 import lock from "../../../assets/quiz_img/image-926.png";
 
@@ -48,16 +49,8 @@ export const FifthPage = (props) => {
             >
               Get my plan
             </button>
-
-            <button
-              onClick={() => props.prev()}
-              type="button"
-              aria-label="back"
-              className={css.btn}
-            >
-              Back
-            </button>
           </div>
+          <BackButton handlePrev={props.prev} />
         </Form>
       </Formik>
     </>

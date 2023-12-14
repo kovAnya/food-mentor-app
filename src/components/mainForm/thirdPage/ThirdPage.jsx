@@ -1,5 +1,6 @@
 import css from "./ThirdPage.module.css";
 import { Formik, Field, Form } from "formik";
+import { BackButton } from "../backButton/BackButton";
 
 import bodyTypeRegular from "../../../assets/quiz_img/body-type-1.png";
 import bodyTypePlumb from "../../../assets/quiz_img/body-type-2.png";
@@ -29,7 +30,7 @@ export const ThirdPage = (props) => {
                 value="Regular"
                 onClick={handleChange}
               />
-              Regular
+              <span>Regular</span>
               <div className={`${css.img_thmb} ${css.color_secondary_main}`}>
                 <img className={css.img} src={bodyTypeRegular} alt="Regular" />
               </div>
@@ -42,7 +43,7 @@ export const ThirdPage = (props) => {
                 value="Plumb"
                 onClick={handleChange}
               />
-              Plumb
+              <span>Plumb</span>
               <div className={`${css.img_thmb} ${css.color_secondary_mono_1}`}>
                 <img className={css.img} src={bodyTypePlumb} alt="Plumb" />
               </div>
@@ -55,20 +56,13 @@ export const ThirdPage = (props) => {
                 value="Extra Plumb"
                 onClick={handleChange}
               />
-              Extra Plumb
+              <span>Extra Plumb</span>
               <div className={`${css.img_thmb} ${css.color_secondary_mono_3}`}>
                 <img className={css.img} src={bodyTypeExtra} alt="Extra" />
               </div>
             </label>
           </div>
-          <button
-            onClick={() => props.prev()}
-            type="button"
-            aria-label="back"
-            className={css.btn}
-          >
-            Back
-          </button>
+          <BackButton handlePrev={props.prev} />
         </Form>
       </Formik>
     </div>

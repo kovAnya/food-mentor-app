@@ -1,5 +1,6 @@
 import css from "./SecondPage.module.css";
 import { Formik, Field, Form } from "formik";
+import { BackButton } from "../backButton/BackButton";
 
 import goalShapeLoose from "../../../assets/quiz_img/goal-1.png";
 import goalShapePerfect from "../../../assets/quiz_img/goal-2.png";
@@ -101,14 +102,7 @@ export const SecondPage = (props) => {
               </label>
             </div>
           </div>
-          <button
-            onClick={() => props.prev()}
-            type="button"
-            aria-label="back"
-            className={css.btn}
-          >
-            Back
-          </button>
+          <BackButton handlePrev={props.prev} />
         </Form>
       </Formik>
     </>

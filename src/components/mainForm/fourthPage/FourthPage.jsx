@@ -1,5 +1,6 @@
 import css from "./FourthPage.module.css";
 import { Formik, Field, Form } from "formik";
+import { BackButton } from "../backButton/BackButton";
 
 import workoutNot from "../../../assets/quiz_img/image-456.png";
 import workoutWalk from "../../../assets/quiz_img/image-840.png";
@@ -29,8 +30,8 @@ export const FourthPage = (props) => {
                 name="workout"
                 value="No, I don't"
                 onClick={handleChange}
-              />
-              No, I don't
+              />{" "}
+              <span>No, I don't </span>
               <div className={`${css.img_thmb} ${css.color_secondary_main}`}>
                 <img className={css.img} src={workoutNot} alt="No, I don't" />
               </div>
@@ -43,7 +44,7 @@ export const FourthPage = (props) => {
                 value="Only walks"
                 onClick={handleChange}
               />
-              Only walks
+              <span>Only walks</span>
               <div className={`${css.img_thmb} ${css.color_secondary_mono_1}`}>
                 <img className={css.img} src={workoutWalk} alt="Only walks" />
               </div>
@@ -56,7 +57,7 @@ export const FourthPage = (props) => {
                 value="1-2 times a week"
                 onClick={handleChange}
               />
-              1-2 times a week
+              <span>1-2 times a week</span>
               <div className={`${css.img_thmb} ${css.color_secondary_mono_3}`}>
                 <img
                   className={css.img}
@@ -73,7 +74,7 @@ export const FourthPage = (props) => {
                 value="3-5 times a week"
                 onClick={handleChange}
               />
-              3-5 times a week
+              <span>3-5 times a week</span>
               <div className={`${css.img_thmb} ${css.color_secondary_mono_2}`}>
                 <img
                   className={css.img}
@@ -83,14 +84,7 @@ export const FourthPage = (props) => {
               </div>
             </label>
           </div>
-          <button
-            onClick={() => props.prev()}
-            type="button"
-            aria-label="back"
-            className={css.btn}
-          >
-            Back
-          </button>
+          <BackButton handlePrev={props.prev} />
         </Form>
       </Formik>
     </>
