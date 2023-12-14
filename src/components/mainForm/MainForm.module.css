@@ -9,3 +9,13 @@
     margin-right: auto;
   }
 }
+
+.quiz_info {
+  padding-top: 30px;
+  text-align: center;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.33;
+  text-transform: uppercase;
+}

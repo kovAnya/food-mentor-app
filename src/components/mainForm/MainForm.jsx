@@ -52,7 +52,7 @@ export const MainForm = ({ onStepChange }) => {
         <div className={css.container}>{pages[currentPage]}</div>
       ) : (
         <div>
-          <p>
+          <p className={css.quiz_info}>
             Gender: {data.gender}, Goal: {data.goal}, Body type:{" "}
             {data.body_type}, Workout: {data.workout}, email: {data.email},
           </p>
