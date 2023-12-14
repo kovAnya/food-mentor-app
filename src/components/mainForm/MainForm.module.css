@@ -10,12 +10,33 @@
   }
 }
 
-.quiz_info {
-  padding-top: 30px;
+.quiz_title {
+  margin-bottom: 10vh;
   text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.19;
+}
+
+.quizz_answers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quiz_info {
   color: var(--text-primary);
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.33;
+}
+
+.answer {
+  padding-right: 12px;
+  font-weight: 700;
   text-transform: uppercase;
+}
+
+.quiz_info_item:not(:last-child) {
+  margin-bottom: 6px;
 }

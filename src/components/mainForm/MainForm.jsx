@@ -47,17 +47,24 @@ export const MainForm = ({ onStepChange }) => {
   ];
 
   return (
-    <>
+    <div className={css.container}>
       {!showResult ? (
-        <div className={css.container}>{pages[currentPage]}</div>
+        pages[currentPage]
       ) : (
-        <div>
-          <p className={css.quiz_info}>
-            Gender: {data.gender}, Goal: {data.goal}, Body type:{" "}
-            {data.body_type}, Workout: {data.workout}, email: {data.email},
-          </p>
+        <div className={css.quizz_answers}>
+          <h1 className={css.quiz_title}>Thank you for the answers!</h1>
+          <ul className={css.quiz_info}>
+            {Object.entries(data).map((step) => {
+              return (
+                <li className={css.quiz_info_item} key={step[0]}>
+                  <span className={css.answer}>{step[0]}:</span>
+                  {step[1]}
+                </li>
+              );
+            })}
+          </ul>
         </div>
       )}
-    </>
+    </div>
   );
 };
