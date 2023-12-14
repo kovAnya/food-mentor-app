@@ -102,7 +102,7 @@
 }
 
 .radio_btn:checked + .img_thmb {
-  border: 1px solid var(--color-brand-main);
+  border: 2px solid var(--color-brand-main);
 }
 
 @media screen and (min-width: 768px) {

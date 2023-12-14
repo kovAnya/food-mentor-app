@@ -30,7 +30,7 @@ export const ThirdPage = (props) => {
                 value="Regular"
                 onClick={handleChange}
               />
-              Regular
+              <span>Regular</span>
               <div className={`${css.img_thmb} ${css.color_secondary_main}`}>
                 <img className={css.img} src={bodyTypeRegular} alt="Regular" />
               </div>
@@ -43,7 +43,7 @@ export const ThirdPage = (props) => {
                 value="Plumb"
                 onClick={handleChange}
               />
-              Plumb
+              <span>Plumb</span>
               <div className={`${css.img_thmb} ${css.color_secondary_mono_1}`}>
                 <img className={css.img} src={bodyTypePlumb} alt="Plumb" />
               </div>
@@ -56,7 +56,7 @@ export const ThirdPage = (props) => {
                 value="Extra Plumb"
                 onClick={handleChange}
               />
-              Extra Plumb
+              <span>Extra Plumb</span>
               <div className={`${css.img_thmb} ${css.color_secondary_mono_3}`}>
                 <img className={css.img} src={bodyTypeExtra} alt="Extra" />
               </div>
