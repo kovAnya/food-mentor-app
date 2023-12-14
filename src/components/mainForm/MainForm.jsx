@@ -1,7 +1,6 @@
 import css from "./MainForm.module.css";
 
 import { useState } from "react";
-import { Formik, Field, Form } from "formik";
 
 import { FirstPage } from "./firstPage/FirstPage";
 import { SecondPage } from "./secondPage/SecondPage";
@@ -43,5 +42,5 @@ export const MainForm = () => {
     <FifthPage next={handleNextPage} prev={handlePrevPage} data={data} />,
   ];
 
-  return <div>{pages[currentPage]}</div>;
+  return <div className={css.container}>{pages[currentPage]}</div>;
 };
