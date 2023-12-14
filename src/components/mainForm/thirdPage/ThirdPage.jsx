@@ -1,5 +1,6 @@
 import css from "./ThirdPage.module.css";
 import { Formik, Field, Form } from "formik";
+import { BackButton } from "../backButton/BackButton";
 
 import bodyTypeRegular from "../../../assets/quiz_img/body-type-1.png";
 import bodyTypePlumb from "../../../assets/quiz_img/body-type-2.png";
@@ -61,14 +62,7 @@ export const ThirdPage = (props) => {
               </div>
             </label>
           </div>
-          <button
-            onClick={() => props.prev()}
-            type="button"
-            aria-label="back"
-            className={css.btn}
-          >
-            Back
-          </button>
+          <BackButton handlePrev={props.prev} />
         </Form>
       </Formik>
     </div>

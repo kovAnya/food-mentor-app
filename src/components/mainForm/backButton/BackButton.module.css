@@ -1,0 +1,12 @@
+.btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: none;
+  color: var(--text-primary);
+  padding: 8px;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.33;
+}

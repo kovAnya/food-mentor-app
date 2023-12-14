@@ -1,5 +1,6 @@
 import css from "./FourthPage.module.css";
 import { Formik, Field, Form } from "formik";
+import { BackButton } from "../backButton/BackButton";
 
 import workoutNot from "../../../assets/quiz_img/image-456.png";
 import workoutWalk from "../../../assets/quiz_img/image-840.png";
@@ -83,14 +84,7 @@ export const FourthPage = (props) => {
               </div>
             </label>
           </div>
-          <button
-            onClick={() => props.prev()}
-            type="button"
-            aria-label="back"
-            className={css.btn}
-          >
-            Back
-          </button>
+          <BackButton handlePrev={props.prev} />
         </Form>
       </Formik>
     </>

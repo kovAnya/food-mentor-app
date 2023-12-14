@@ -49,6 +49,7 @@
 
 .styled_btn {
   display: flex;
+  margin-bottom: 8px;
   align-items: center;
   justify-content: center;
   gap: 8px;
